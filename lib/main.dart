@@ -2,18 +2,42 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.deepOrangeAccent,
-        appBar: AppBar(
-          title: Text('CodeWithAlok'),
-          backgroundColor: Colors.deepPurple,
-        ),
-        body: Image(
-          image: AssetImage('images/PICTURE.jpg'),
-        ),
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+            child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              height: 100.0,
+              color: Colors.white,
+              child: Text('Container 1'),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Container(
+              height: 100.0,
+              color: Colors.blue,
+              child: Text('Container 2'),
+            ),
+            Container(
+              height: 100.0,
+              color: Colors.red,
+              child: Text('Container 3'),
+            ),
+          ],
+        )),
       ),
-    ),
-  );
+    );
+  }
 }
