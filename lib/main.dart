@@ -15,26 +15,65 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 100.0,
-              color: Colors.white,
-              child: Text('Container 1'),
+            CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage('images/PICTURE.jpg'),
+            ),
+            Text(
+              'Alok Bharti',
+              style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Senior Software Developer',
+              style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  color: Colors.teal.shade100,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.5),
             ),
             SizedBox(
-              height: 20.0,
+              height: 15.0,
+              width: 150.0,
+              child: Divider(
+                color: Colors.teal.shade100,
+              ),
             ),
-            Container(
-              height: 100.0,
-              color: Colors.blue,
-              child: Text('Container 2'),
-            ),
-            Container(
-              height: 100.0,
-              color: Colors.red,
-              child: Text('Container 3'),
-            ),
+            Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+91-7000000007',
+                    style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontSize: 20.0,
+                        fontFamily: 'Source Sans Pro'),
+                  ),
+                )),
+            Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(Icons.email, color: Colors.teal),
+                  title: Text(
+                    'alok@gmail.com',
+                    style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontSize: 20.0,
+                        fontFamily: 'Source Sans Pro'),
+                  ),
+                )),
           ],
         )),
       ),
